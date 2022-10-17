@@ -1,0 +1,9 @@
+nav {
+    background: #000;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5 rem calc(100vw-1000px)/2; 
+    z-index: 10;
+    color: white
+}
