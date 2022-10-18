@@ -1,0 +1,74 @@
+nav {
+    background: navy;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5 rem calc(100vw-1000px)/2;
+    z-index: 10;
+    color: white;
+    font-family: 'Cute Font', cursive;
+    font-size: x-large;
+
+
+}
+
+button {
+    border-radius: 4px;
+    background: yellowgreen;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    height: 2em;
+    width: 6em;
+    margin-right: 2em;
+    margin-top: 1em;
+    font-family: 'Cute Font', cursive;
+    font-size: large;
+
+}
+
+button:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: navy;
+
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2em;
+}
+
+.animate-charcter {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2em;
+    background-image: linear-gradient(-225deg,
+            #eff9db 0%,
+            #72d790 29%,
+            #39b499 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 60px;
+    margin-right: .5em;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
