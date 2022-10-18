@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { ResultsPageComponent } from './results-page/results-page.component';
 import { JammerProfileComponent } from './jammer-profile/jammer-profile.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { JamRequestsComponent } from './jam-requests/jam-requests.component';
+import { AcceptedJammersComponent } from './accepted-jammers/accepted-jammers.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,6 +17,9 @@ import { JammerProfileComponent } from './jammer-profile/jammer-profile.componen
     SearchbarComponent,
     ResultsPageComponent,
     JammerProfileComponent,
+    UserProfileComponent,
+    JamRequestsComponent,
+    AcceptedJammersComponent,
   ],
   imports: [
     BrowserModule,
