@@ -1,9 +1,9 @@
 .jammerProfile {
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
-    box-shadow: 10px 5px 5px rgb(156, 150, 150);
+    border-radius: 3px;
     font-family: Arial;
+    background-image: linear-gradient(to right, rgb(224, 205, 205), rgb(181, 240, 242));
 
 }
 
@@ -25,6 +25,7 @@ button {
     text-decoration: none;
     font-family: 'Cute Font', cursive;
     font-size: x-large;
+    margin-left: 10em;
 
 
 }
@@ -38,8 +39,8 @@ button:hover {
 
 .flexDiv {
     display: flex;
-    flex-direction: column;
-    align-content: stretch;
+    flex-direction: row;
+    align-content: flex-end;
     align-items: center;
 
 

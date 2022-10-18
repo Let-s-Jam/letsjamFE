@@ -1,3 +1,4 @@
+
 button {
     border-radius: 4px;
     background: turquoise;
@@ -24,11 +25,13 @@ button:hover {
 input {
     padding: 10px;
     border-radius: 10px;
+    border-color: rgb(202, 198, 198);
 }
 select{
     padding: 10px;
     border-radius: 10px;
     margin: 5px;
+    border-color: rgb(202, 198, 198);
 }
 form {
     margin: 2em;
