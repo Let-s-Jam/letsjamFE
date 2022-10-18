@@ -1,0 +1,46 @@
+.jammerProfile {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px rgb(156, 150, 150);
+    font-family: Arial;
+
+}
+
+.jammerInfo {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+}
+
+button {
+    border-radius: 4px;
+    background:yellowgreen;
+    padding: 10px 22px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-family: 'Cute Font', cursive;
+    font-size: x-large;
+
+
+}
+
+button:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color:navy
+
+}
+
+.flexDiv {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+
+
+}

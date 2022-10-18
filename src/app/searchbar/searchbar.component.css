@@ -1,0 +1,35 @@
+button {
+    border-radius: 4px;
+    background: turquoise;
+    padding: 10px 22px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-family: 'Cute Font', cursive;
+    font-size: 1.5em;
+    margin-left: 1em;
+
+}
+
+button:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: navy;
+
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+}
+select{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+form {
+    margin: 2em;
+}
