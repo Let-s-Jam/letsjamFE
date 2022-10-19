@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FOUNDJAMMERS } from 'src/dummy-data';
 
 @Component({
   selector: 'app-jammer-profile',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class JammerProfileComponent implements OnInit {
 
   constructor() { }
+
+  found = FOUNDJAMMERS;
 
   ngOnInit(): void {
   }

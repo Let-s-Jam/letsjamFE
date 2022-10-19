@@ -4,14 +4,16 @@
     </div>
     <div class="flexDiv">
         <div class="jammerInfo">
-            <p><span class="bolded">Name: </span> Pablo</p>
-            <p><span class="bolded">Instrument: </span> Guitar </p>
-            <p><span class="bolded">Genre: </span> Indie Groove Jam Americana</p>
-            <p><span class="bolded">Distance: </span> 5 miles away</p>
-            <p><span class="bolded">About Me: </span> I'm usually free on Thursday evenings if you want to jam! </p>
+            <p><span class="bolded">Name: {{found.data[0].results.found_users[0].name}}</span></p>
+            <p><span class="bolded">Instrument: </span>{{found.data[0].results.found_users[0].played_instruments}}</p>
+            <p><span class="bolded">Genre: </span> {{found.data[0].results.found_users[0].sought_instruments}}</p>
+            <p><span class="bolded">Distance: </span>{{found.data[0].results.found_users[0].distance}}</p>
+            <p><span class="bolded">About Me: </span> {{found.data[0].results.found_users[0].about}}</p>
         </div>
         <div class="letsjamButton">
             <button>Let's Jam!</button>
         </div>
     </div>
 </div>
+
+<!-- <span class="badge">{{hero.id}}</span> -->
