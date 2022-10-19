@@ -1,19 +1,21 @@
-<div class="jammerProfile">
+<ul>
+    <li *ngFor="let found of founds; index as i" class="jammerProfile">
     <div class="profileImage">
         <img height="300px" width="300px" src="../assets/guitar.png">
     </div>
     <div class="flexDiv">
         <div class="jammerInfo">
-            <p><span class="bolded">Name: {{found.data[0].results.found_users[0].name}}</span></p>
-            <p><span class="bolded">Instrument: </span>{{found.data[0].results.found_users[0].played_instruments}}</p>
-            <p><span class="bolded">Genre: </span> {{found.data[0].results.found_users[0].sought_instruments}}</p>
-            <p><span class="bolded">Distance: </span>{{found.data[0].results.found_users[0].distance}}</p>
-            <p><span class="bolded">About Me: </span> {{found.data[0].results.found_users[0].about}}</p>
+            <p><span class="bolded"> Name: </span>{{founds[i].name}}</p>
+            <p><span class="bolded">Instrument: </span>{{founds[i].played_instruments}}</p>
+            <p><span class="bolded">Genre: </span> {{founds[i].sought_instruments}}</p>
+            <p><span class="bolded">Distance: </span>{{founds[i].distance}}</p>
+            <p><span class="bolded">About Me: </span> {{founds[i].about}}</p>
         </div>
         <div class="letsjamButton">
             <button>Let's Jam!</button>
         </div>
     </div>
-</div>
+    </li>
+</ul>
 
 <!-- <span class="badge">{{hero.id}}</span> -->
