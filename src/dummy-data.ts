@@ -1,5 +1,5 @@
 export interface foundJammers {
-    data: object
+    data: any
 }
 
 export const FOUNDJAMMERS: foundJammers = {

@@ -10,6 +10,8 @@ export class JammerProfileComponent implements OnInit {
 
   constructor() { }
 
+  found = FOUNDJAMMERS;
+
   ngOnInit(): void {
   }
 
