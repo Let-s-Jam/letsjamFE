@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class SearchbarComponent implements OnInit {
 
   constructor() { }
-
+  home = true;
+  switchView() {
+    this.home = false;
+  }
   ngOnInit(): void {
   }
 
