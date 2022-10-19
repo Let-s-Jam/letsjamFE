@@ -36,3 +36,7 @@ select{
 form {
     margin: 2em;
 }
+
+.hidden {
+    display: none;
+}
