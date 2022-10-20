@@ -7,7 +7,8 @@ import { UserService } from '../services/user-service';
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.css']
+  styleUrls: ['./user-profile.component.css'],
+  providers: [UserService]
 })
 export class UserProfileComponent implements OnInit {
 
@@ -19,6 +20,7 @@ export class UserProfileComponent implements OnInit {
       this.userService.getUserProfile().subscribe((data: any) => {
       console.log(data)
       this.user = data.data[0].attributes
+      console.log("username", this.user.name)
       })
   }
 }

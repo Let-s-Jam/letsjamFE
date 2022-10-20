@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FOUNDJAMMERS } from 'src/dummy-data';
-import { foundJammers } from 'src/dummy-data';
 import { UserService } from '../services/user-service';
 
 @Component({
