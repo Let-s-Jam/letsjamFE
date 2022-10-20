@@ -20,7 +20,7 @@ public founds: any
 
   ngOnInit(): void {
     this.userService.getJammers().subscribe((data: any) => {
-      console.log(data)
+      console.log('search results', data)
       this.founds = data.data[0].results.found_users
     })
   }
