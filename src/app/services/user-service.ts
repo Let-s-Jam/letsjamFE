@@ -13,6 +13,10 @@ export class UserService {
     return this.http.get('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1');
   }
 
+  getIncomingJammerProfiles() {
+    return this.http.get('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1/connections');
+  }
+
   //add another method like this for each request, after they fix the json we can remove the responsetype argument
   //in your component once you get data thats well structured 
 
