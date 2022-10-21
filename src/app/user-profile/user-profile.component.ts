@@ -3,6 +3,7 @@ import { JammerProfileComponent } from '../jammer-profile/jammer-profile.compone
 import { AcceptedJammersComponent } from '../accepted-jammers/accepted-jammers.component';
 import { JamRequestsComponent } from '../jam-requests/jam-requests.component';
 import { UserInfoComponent } from '../user-info/user-info.component';
+import { UserEditComponent } from '../user-edit/user-edit.component';
 import { UserService } from '../services/user-service';
 
 @Component({
