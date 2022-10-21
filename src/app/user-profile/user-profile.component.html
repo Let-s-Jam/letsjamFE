@@ -1,21 +1,4 @@
-<div class="userProfile">
-    <div class="userProfileImage">
-        <img height="300px" width="300px" src="../assets/guitar.png">
-    </div>
-    <div class="userProfileDiv">
-        <div class="UserInfo">
-            <p><span class="bolded">Name: </span> {{user.name}}</p>
-            <p><span class="bolded">Jam ZIP Code: </span> {{user.zipcode}}</p>
-            <p><span class="bolded">My Instruments: </span> {{user.played_instruments}} </p>
-            <p><span class="bolded">Genre: </span> ADD A GENRE, BACKEND!</p>
-            <p><span class="bolded">My Email: </span> {{user.display_email}}</p>
-            <p><span class="bolded">About Me: </span> {{user.about}} </p>
-        </div>
-        <div class="letsjamButton">
-            <button>Edit Profile</button>
-        </div>
-    </div>
-</div>
+<app-user-info></app-user-info>
 <div>
     <app-jam-requests></app-jam-requests>
     <app-accepted-jammers></app-accepted-jammers>
