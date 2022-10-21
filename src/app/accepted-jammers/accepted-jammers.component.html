@@ -1,22 +1,22 @@
 <div>
     <h2>Friends</h2>
     <ul class="friendsList">
-        <li>
+        <li *ngFor="let friend of friends; index as i" class="jamRequests">
             <div class="jammerProfile">
                 <div class="profileImage">
-                    <img height="300px" width="300px" src="../assets/guitar.png">
+                    <img height="300px" width="300px" src="{{friends[i].picture_url}}">
                 </div>
                 <div class="flexDiv">
                     <div class="jammerInfo">
-                        <p><span class="bolded">Name: </span> Pablo</p>
-                        <p><span class="bolded">Instrument: </span> Guitar </p>
-                        <p><span class="bolded">Genre: </span> Indie Groove Jam Americana</p>
-                        <p><span class="bolded">Distance: </span> 5 miles away</p>
-                        <p><span class="bolded">About Me: </span> I'm usually free on Thursday evenings if you want to jam! </p>
+                        <p><span class="bolded">Name: </span>{{friends[i].name}}</p>
+                        <p><span class="bolded">Instrument: </span>{{friends[i].played_instruments}}</p>
+                        <p><span class="bolded">Genre: </span>{{friends[i].genre}}</p>
+                        <p><span class="bolded">Distance: </span>{{friends[i].distance}}</p>
+                        <p><span class="bolded">About Me: </span>{{friends[i].about}}</p>
+                        <p><span class="bolded">Email: </span>{{friends[i].email}}</p>
                     </div>
                     <div class="letsjamButton">
                         <button class="acceptJamRequest">Let's Jam!</button>
-                        <button class="denyJamRequest">Nah!</button>
                     </div>
                 </div>
             </div>
