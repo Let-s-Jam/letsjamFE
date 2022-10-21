@@ -10,6 +10,7 @@ import { JammerProfileComponent } from './jammer-profile/jammer-profile.componen
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { JamRequestsComponent } from './jam-requests/jam-requests.component';
 import { AcceptedJammersComponent } from './accepted-jammers/accepted-jammers.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { AcceptedJammersComponent } from './accepted-jammers/accepted-jammers.co
     UserProfileComponent,
     JamRequestsComponent,
     AcceptedJammersComponent,
+    UserInfoComponent,
   ],
   imports: [
     BrowserModule,
