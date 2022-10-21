@@ -1,0 +1,38 @@
+.userProfile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+
+.bolded {
+    font-weight: bold;
+    font-family: Arial;
+}
+
+button {
+    border-radius: 4px;
+    background: rgb(108, 149, 236);
+    padding: 10px 22px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-family: 'Cute Font', cursive;
+    font-size: x-large;
+    margin-left: 1em;
+
+
+}
+
+button:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: navy
+}
+p{
+ margin-left: 1em;
+}
