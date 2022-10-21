@@ -11,6 +11,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { JamRequestsComponent } from './jam-requests/jam-requests.component';
 import { AcceptedJammersComponent } from './accepted-jammers/accepted-jammers.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { UserInfoComponent } from './user-info/user-info.component';
     JamRequestsComponent,
     AcceptedJammersComponent,
     UserInfoComponent,
+    UserEditComponent,
   ],
   imports: [
     BrowserModule,
