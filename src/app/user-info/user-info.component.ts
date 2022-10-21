@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { UserService } from '../services/user-service';
 @Component({
   selector: 'app-user-info',
@@ -6,10 +6,13 @@ import { UserService } from '../services/user-service';
   styleUrls: ['./user-info.component.css']
 })
 export class UserInfoComponent implements OnInit {
+  @Input() edit: any
+  @Input() updateEdit: ((args: boolean) => void) | undefined;
   public user: any
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) { 
 
+  }
   ngOnInit(): void {
     this.userService.getUserProfile().subscribe((data: any) => {
       console.log('user profile', data)
@@ -17,4 +20,9 @@ export class UserInfoComponent implements OnInit {
       console.log("username", this.user.name)
     })
   }
+  switchView() {
+    this.edit = true
+    this.updateEdit!(true)
+    console.log(this.edit)
+}
 }
