@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '../services/user-service';
 @Component({
   selector: 'app-user-info',
@@ -6,9 +6,12 @@ import { UserService } from '../services/user-service';
   styleUrls: ['./user-info.component.css']
 })
 export class UserInfoComponent implements OnInit {
+  @Input() edit = Boolean
   public user: any
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) { 
+    edit: this.edit;
+  }
 
   ngOnInit(): void {
     this.userService.getUserProfile().subscribe((data: any) => {

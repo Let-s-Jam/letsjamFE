@@ -1,5 +1,5 @@
-<app-user-info></app-user-info>
-<app-user-edit></app-user-edit>
+<app-user-info [edit]="edit"></app-user-info>
+<app-user-edit *ngIf="edit" ></app-user-edit>
 <div>
     <app-jam-requests></app-jam-requests>
     <app-accepted-jammers></app-accepted-jammers>

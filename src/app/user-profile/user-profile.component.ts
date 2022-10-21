@@ -15,8 +15,10 @@ import { UserService } from '../services/user-service';
 export class UserProfileComponent implements OnInit {
 
   public user: any 
-
-  constructor(private userService: UserService) { }
+  public edit: any;
+  constructor(private userService: UserService) { 
+    edit: false
+  }
 
   ngOnInit(): void {
       this.userService.getUserProfile().subscribe((data: any) => {
