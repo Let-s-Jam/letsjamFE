@@ -16,7 +16,8 @@ interface updatedUser {
 @Component({
   selector: 'app-user-edit',
   templateUrl: './user-edit.component.html',
-  styleUrls: ['./user-edit.component.css']
+  styleUrls: ['./user-edit.component.css'],
+  providers: [UserService]
 })
 
 export class UserEditComponent implements OnInit {
