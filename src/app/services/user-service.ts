@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UserEditComponent } from '../user-edit/user-edit.component';
+
 
 @Injectable()
 export class UserService {
@@ -16,14 +18,14 @@ export class UserService {
   getIncomingJammerProfiles() {
     return this.http.get('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1/connections');
   }
-  editProfile(value: any) {
-   this.http.patch('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1', {
-      "attributes": value
-   })
-    //  .then(response => console.log(response))
+//   editProfile(value: ) {
+//    return this.http.patch('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1', {
+//       "attributes": value
+//    })
+//     //  .then(response => console.log(response))
   }
     
-}
+// }
 // userEdit$ = new Observable(observer => {
 //   fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
 //     .then(response => response.json())
