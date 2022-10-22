@@ -7,8 +7,8 @@ interface updatedUser {
   display_email: string,
   zipcode: number,
   about: string,
-  genre: string[],
-  played_instruments: string[],
+  genres: object[],
+  instruments: object[],
 }
 // const params = new HttpParams()
 //   .set("attributes", userEdit)
@@ -26,8 +26,8 @@ export class UserEditComponent implements OnInit {
   display_email: "",
   zipcode: 0,
   about: "",
-  genre: [],
-  played_instruments: [],
+  genres: [],
+  instruments: [],
 }
 
   @Output() updateEdit = new EventEmitter<boolean>();
