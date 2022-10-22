@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user-edit',
@@ -6,11 +6,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./user-edit.component.css']
 })
 export class UserEditComponent implements OnInit {
-  @Input() edit= Boolean
+
+  @Output() updateEdit = new EventEmitter<boolean>();
   constructor() { 
    }
 
   ngOnInit(): void {
   }
+ 
+  submit(): void {
+    this.updateEdit.emit(false)
+   }
 
 }

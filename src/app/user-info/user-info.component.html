@@ -3,7 +3,7 @@
         <img height="300px" width="300px" src="../assets/guitar.png">
     </div>
     <div class="userProfileDiv">
-        <div class="UserInfo">
+        <div class="UserInfo" *ngIf="user">
             <p><span class="bolded">Name: </span> {{user.name}}</p>
             <p><span class="bolded">Jam ZIP Code: </span> {{user.zipcode}}</p>
             <p><span class="bolded">My Instruments: </span> {{user.played_instruments}} </p>
