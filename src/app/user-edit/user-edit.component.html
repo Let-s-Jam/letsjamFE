@@ -4,12 +4,12 @@
     </div>
     <div class="userProfileDiv">
         <form class="UserEdit">
-            <p><span class="bolded">Name: </span> <input type="text" /></p>
-            <p><span class="bolded">Jam ZIP Code: </span> <input type="text" /></p>
-            <p><span class="bolded">My Instruments: </span> <input type="text" /></p>
-            <p><span class="bolded">Genre: </span><input type="text" /></p>
-            <p><span class="bolded">My Email: </span> <input type="text" /></p>
-            <p><span class="bolded">About Me: </span><input type="text" /></p>
+            <p><span class="bolded">Name: </span> <input type="text" [(ngModel)]="userEdit.name" name="name" /></p>
+            <p><span class="bolded">Jam ZIP Code: </span> <input type="text" [(ngModel)]="userEdit.zipcode" name="zipcode" /></p>
+            <p><span class="bolded">My Instruments: </span> <input type="text" [(ngModel)]="userEdit.played_instruments" name="instruments"/></p>
+            <p><span class="bolded">Genre: </span><input type="text"  [(ngModel)]="userEdit.genre" name="genre"/></p>
+            <p><span class="bolded">My Email: </span> <input type="text" [(ngModel)]="userEdit.display_email" name="email" /></p>
+            <p><span class="bolded">About Me: </span><input type="textarea"  [(ngModel)]="userEdit.about" name="about"/></p>
         <div class="letsjamButton">
             <button (click)="submit()" type="submit">Submit Changes</button>
         </div>
