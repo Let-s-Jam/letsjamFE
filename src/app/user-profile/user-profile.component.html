@@ -1,6 +1,8 @@
 
-<app-user-info *ngIf="!edit else elseBlock"  [(ngModel)]="edit" [updateEdit]="updateEdit"></app-user-info>
-<ng-template #elseBlock><app-user-edit [(ngModel)]="edit"></app-user-edit></ng-template>
+<app-user-info *ngIf="!edit; else elseBlock"  (updateEdit)="updateEdit($event)"></app-user-info>
+<ng-template #elseBlock>
+    <app-user-edit (updateEdit)="updateEdit($event)"></app-user-edit>
+</ng-template>
 <div>
     <app-jam-requests></app-jam-requests>
     <app-accepted-jammers></app-accepted-jammers>

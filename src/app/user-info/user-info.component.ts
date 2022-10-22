@@ -6,8 +6,8 @@ import { UserService } from '../services/user-service';
   styleUrls: ['./user-info.component.css']
 })
 export class UserInfoComponent implements OnInit {
-  @Input() edit: any
-  @Input() updateEdit: ((args: boolean) => void) | undefined;
+
+  @Output() updateEdit = new EventEmitter<boolean>();
   public user: any
 
   constructor(private userService: UserService) { 
@@ -21,8 +21,7 @@ export class UserInfoComponent implements OnInit {
     })
   }
   switchView() {
-    this.edit = true
-    this.updateEdit!(true)
-    console.log(this.edit)
-}
+
+    this.updateEdit.emit(true)
+ }
 }

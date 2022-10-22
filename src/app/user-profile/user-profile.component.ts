@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ApplicationRef, Component, OnInit } from '@angular/core';
 import { JammerProfileComponent } from '../jammer-profile/jammer-profile.component';
 import { AcceptedJammersComponent } from '../accepted-jammers/accepted-jammers.component';
 import { JamRequestsComponent } from '../jam-requests/jam-requests.component';
@@ -15,7 +15,7 @@ import { UserService } from '../services/user-service';
 export class UserProfileComponent implements OnInit {
 
   public user: any 
-  public edit = false
+  public edit = false;
   constructor(private userService: UserService) { 
   
   }
@@ -25,20 +25,13 @@ export class UserProfileComponent implements OnInit {
       console.log('user profile', data)
       this.user = data.data[0].attributes
       console.log("username", this.user.name)
-      
+
       })
+    
   }
 
-  // infoView(): void {
-  //   this.edit = false
-  // }
-  // receiveViewStatus(editStatus: boolean) {
-  //   console.log(this.edit)
-  //   this.edit = editStatus
-  // }
   updateEdit(value: boolean): void {
     this.edit = value
-    console.log(value)
   }
 }
 // public founds: any 
