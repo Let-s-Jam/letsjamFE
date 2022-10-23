@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserEditComponent } from '../user-edit/user-edit.component';
-
+import { Observable } from 'rxjs';
 
 @Injectable()
+
+
 export class UserService {
   constructor(private http: HttpClient) { }
 
@@ -12,20 +14,24 @@ export class UserService {
   }
 
   getUserProfile() {
-    return this.http.get('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1');
+    return this.http.get('https://letusjam.herokuapp.com/api/v1/users/1');
   }
 
   getIncomingJammerProfiles() {
     return this.http.get('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1/connections');
+  
+
   }
-//   editProfile(value: ) {
-//    return this.http.patch('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1', {
-//       "attributes": value
-//    })
-//     //  .then(response => console.log(response))
-  }
+
+  updateProfile(user: object) {
+      return this.http.patch('https://letusjam.herokuapp.com/api/v1/users/1', user,
     
-// }
+      );
+  }
+
+ }
+ 
+
 // userEdit$ = new Observable(observer => {
 //   fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
 //     .then(response => response.json())

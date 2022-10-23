@@ -9,8 +9,8 @@ export class UserInfoComponent implements OnInit {
 
   @Output() updateEdit = new EventEmitter<boolean>();
   public user: any
-  public instruments:any
-  public genres:any
+  public instrument:any
+  public genre:any
   constructor(private userService: UserService) { 
 
   }
@@ -19,8 +19,8 @@ export class UserInfoComponent implements OnInit {
       console.log('user profile', data)
       this.user = data.data[0].attributes
       console.log("username", this.user.name)
-      this.instruments = data.data[0].attributes.instruments
-      this.genres = data.data[0].attributes.genres
+      this.instrument = data.data[0].attributes.instrument
+      this.genre = data.data[0].attributes.genre
     })
   }
   switchView() {
