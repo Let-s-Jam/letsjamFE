@@ -1,14 +1,29 @@
 .userProfile {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    align-content: stretch;
+
+}
+
+.user-profile-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4vw;
+    
 }
 
 .bolded {
     font-weight: bold;
-    font-family: Arial;
+    font-family: Cute Font, cursive;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 30vw;
 }
 
 button {
@@ -35,4 +50,9 @@ button:hover {
 }
 p{
  margin-left: 1em;
+}
+
+h2 {
+    font-family: Cute Font, cursive;
+    font-size: 3em;
 }

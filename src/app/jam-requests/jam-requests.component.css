@@ -3,7 +3,9 @@
     flex-direction: row;
     color: rgb(80, 92, 103);
     align-items: center;
-    
+    height: 20vh;
+    width: 5vw;
+    justify-content: space-between;
 }
 
 .jamRequests {
@@ -14,15 +16,20 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 1em;
     margin-top: 0%;
-    border-radius: 20px;
+    justify-content: space-between
+
 }
 
 .box {
+    border-radius: 10px;
+    border: solid 2px lightgrey;
+    box-shadow:rgb(80, 92, 103);
     padding: 1rem;
     max-height: 500px;
     overflow-y: auto;
     scrollbar-gutter: stable;
     scrollbar-color: #6969dd #e0e0e0;
+    width: 50vw;
 }
 
 .box::-webkit-scrollbar {
@@ -45,9 +52,10 @@
     flex-direction: column;
     align-items: flex-start;
     align-content: center;
+    justify-content: center;
     padding-left: 2em;
     height: 10em;
-    width: 40em;
+    width: 28em;
     border-radius: 20px;
 }
 
@@ -63,7 +71,7 @@ button {
     text-decoration: none;
     font-family: 'Cute Font', cursive;
     font-size: x-large;
-    margin: .5em;
+    
 
 
 
@@ -85,14 +93,17 @@ button:hover {
 .flexDiv {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between; 
+   
 
 }
 .letsjamButton {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 12em;
+    margin-left: 10vw;
 }
 p {
     margin: 0px;
@@ -104,4 +115,11 @@ img {
   
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
+    height: 20vh;
+    width: auto;
+}
+h2 {
+    font-family: Cute Font, cursive;
+    font-size: 3em;
+    margin-top: -4vh;
 }
