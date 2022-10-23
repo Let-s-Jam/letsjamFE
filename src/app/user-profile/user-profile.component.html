@@ -1,9 +1,19 @@
 
+    
+    
+
+<div class="user-profile-div">
+<div class="profile-div">
+<h2>Profile</h2>
 <app-user-info *ngIf="!edit; else elseBlock"  (updateEdit)="updateEdit($event)"></app-user-info>
 <ng-template #elseBlock>
     <app-user-edit (updateEdit)="updateEdit($event)"></app-user-edit>
 </ng-template>
-<div>
-    <app-jam-requests></app-jam-requests>
-    <app-accepted-jammers></app-accepted-jammers>
 </div>
+<div class="jam-request-div">
+<h2>Incoming Jam Requests</h2>
+<app-jam-requests></app-jam-requests>
+</div>
+</div>
+
+    <app-accepted-jammers></app-accepted-jammers>
