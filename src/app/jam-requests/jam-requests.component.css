@@ -1,15 +1,20 @@
 .jammerProfile {
     display: flex;
     flex-direction: row;
+    color: rgb(80, 92, 103);
+    align-items: center;
+    
 }
 
 .jamRequests {
     border-radius: 3px;
-    font-family: Arial;
-    background-image: linear-gradient(to right, rgb(224, 205, 205), rgb(181, 240, 242));
+    font-family: ABeeZee, sans-serif;
+    background-color: rgba(98, 98, 167, 0.4);
+    ;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 1em;
     margin-top: 0%;
+    border-radius: 20px;
 }
 
 .box {
@@ -36,13 +41,16 @@
 }
 
 .jammerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
     padding-left: 2em;
-    background: white;
-    opacity: 0.5;
     height: 10em;
     width: 40em;
-    border-radius: 2px;
+    border-radius: 20px;
 }
+
 button {
     border-radius: 4px;
     background: yellowgreen;
@@ -55,7 +63,8 @@ button {
     text-decoration: none;
     font-family: 'Cute Font', cursive;
     font-size: x-large;
-    margin-left: 1em;
+    margin: .5em;
+
 
 
 }
@@ -64,4 +73,35 @@ button:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: navy
+}
+
+.bolded {
+    font-weight: bolder;
+    font-size: xx-large;
+    font-family: 'Cute Font', cursive;
+
+}
+
+.flexDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.letsjamButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+p {
+    margin: 0px;
+}
+li {
+ list-style: none;
+}
+img {
+  
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }

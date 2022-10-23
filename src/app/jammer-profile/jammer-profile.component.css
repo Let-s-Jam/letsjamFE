@@ -1,12 +1,17 @@
 .jammerProfile {
     display: flex;
     flex-direction: row;
-    border-radius: 3px;
-    font-family: Arial;
-    background-image: linear-gradient(to right, rgb(224, 205, 205), rgb(181, 240, 242));
+    border-radius: 15px;
+    font-family: ABeeZee, sans-serif;
+    color: rgb(80, 92, 103);
+    background-color: rgba(98, 98, 167, 0.4);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 1em;
     margin-top: 0%;
+    height: 30vh;
+    width: 80vw;
+
+
 
 }
 
@@ -16,6 +21,7 @@
     overflow-y: auto;
     scrollbar-gutter: stable;
     scrollbar-color: #6969dd #e0e0e0;
+
 }
 
 .box::-webkit-scrollbar {
@@ -39,15 +45,15 @@
     align-items: flex-start;
     justify-content: space-evenly;
     padding-left: 2em;
-    background: white;
-    opacity: 0.5;
+    /* background: white;
+    opacity: 0.5; */
     height: 10em;
     width: 40em;
-    border-radius: 2px;
+    border-radius: 20px;
 }
 
 button {
-    border-radius: 4px;
+    border-radius: 8px;
     background: yellowgreen;
     padding: 10px 22px;
     color: #fff;
@@ -83,7 +89,10 @@ p {
 }
 
 .bolded {
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-family: 'Cute Font', cursive;
+    
 }
 
 h2 {
@@ -91,4 +100,11 @@ h2 {
     margin-bottom: none;
     font-family: 'Cute Font', cursive;
     font-size: xxx-large;
+}
+
+.image {
+    height: 30vh;
+    width: auto;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }

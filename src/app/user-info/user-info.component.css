@@ -4,12 +4,17 @@
     justify-content: center;
     align-items: center;
     align-content: stretch;
+    font-family: ABeeZee, sans-serif;
 }
 
+
 .bolded {
-    font-weight: bold;
-    font-family: Arial;
-}
+        font-weight: bolder;
+        font-size: xx-large;
+        font-family: 'Cute Font', cursive;
+
+    }
+
 
 button {
     border-radius: 4px;
