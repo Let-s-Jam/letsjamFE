@@ -1,6 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user-service';
 
+interface SearchResults {
+  id: number,
+  name: string,
+  about: string,
+  zipcode: number,
+  picture_url: string,
+  instruments: object[],
+  needs_instruments: object[],
+  genres: object[]
+}
+
 @Component({
   selector: 'app-jammer-profile',
   templateUrl: './jammer-profile.component.html',
@@ -10,7 +21,16 @@ import { UserService } from '../services/user-service';
 })
 export class JammerProfileComponent implements OnInit {
 
-public founds: any 
+public founds: SearchResults[] = [{
+  id: 0,
+  name:"",
+  about: "",
+  zipcode: 0,
+  picture_url: "",
+  instruments: [],
+  needs_instruments: [],
+  genres: []
+}]
 
   constructor(private userService: UserService) { 
     //this adds userService obviously lol
