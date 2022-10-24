@@ -9,18 +9,18 @@ export class UserInfoComponent implements OnInit {
 
   @Output() updateEdit = new EventEmitter<boolean>();
   public user: any
-  public instruments:any
-  public genres:any
+  public instrument:any
+  public genre:any
   constructor(private userService: UserService) { 
 
   }
   ngOnInit(): void {
     this.userService.getUserProfile().subscribe((data: any) => {
       console.log('user profile', data)
-      this.user = data.data[0].attributes
+      this.user = data.data.attributes
       console.log("username", this.user.name)
-      this.instruments = data.data[0].attributes.instruments
-      this.genres = data.data[0].attributes.genres
+      this.instrument = data.data.attributes.instrument
+      this.genre = data.data.attributes.genre
     })
   }
   switchView() {

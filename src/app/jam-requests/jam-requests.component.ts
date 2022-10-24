@@ -14,10 +14,10 @@ export class JamRequestsComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.getIncomingJammerProfiles().subscribe((data: any) => {
-      console.log('requests', data)
-      this.requests = data.data[0].attributes.connections_pending
-    })
+    // this.userService.getIncomingJammerProfiles().subscribe((data: any) => {
+    //   console.log('requests', data)
+    //   this.requests = data.data[0].attributes.connections_pending
+    // })
   }
 
 }

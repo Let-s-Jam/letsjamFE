@@ -19,10 +19,10 @@ public founds: any
   // founds = FOUNDJAMMERS.data[0].results.found_users;
 
   ngOnInit(): void {
-    this.userService.getJammers().subscribe((data: any) => {
-      console.log('search results', data)
-      this.founds = data.data[0].results.found_users
-    })
+    // this.userService.getJammers().subscribe((data: any) => {
+    //   console.log('search results', data)
+    //   this.founds = data.data[0].results.found_users
+    // })
   }
 
   // data is the repsonse from the server

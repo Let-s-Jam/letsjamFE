@@ -7,8 +7,8 @@ interface updatedUser {
   display_email: string,
   zipcode: number,
   about: string,
-  genres: object[],
-  instruments: object[],
+  genre: string,
+  instrument: string
 }
 // const params = new HttpParams()
 //   .set("attributes", userEdit)
@@ -27,8 +27,8 @@ export class UserEditComponent implements OnInit {
   display_email: "",
   zipcode: 0,
   about: "",
-  genres: [],
-  instruments: [],
+  genre: "",
+  instrument: "",
 }
 
   @Output() updateEdit = new EventEmitter<boolean>();
@@ -41,7 +41,8 @@ export class UserEditComponent implements OnInit {
  
   submit(): void {
     this.updateEdit.emit(false)
-    console.log(this.userEdit.name, "name")
+    this.userService.updateProfile(this.userEdit)
+    console.log(this.userEdit, "user")
     // this.userEdit$ = this.http
     
       

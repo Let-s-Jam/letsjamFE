@@ -62,6 +62,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "letsjam:build",
+            "proxyConfig": "src/app/proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "letsjam:build:production"

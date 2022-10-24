@@ -6,8 +6,30 @@
         <form class="UserEdit">
             <p><span class="bolded">Name: </span> <input type="text" [(ngModel)]="userEdit.name" name="name" /></p>
             <p><span class="bolded">Jam ZIP Code: </span> <input type="text" [(ngModel)]="userEdit.zipcode" name="zipcode" /></p>
-            <p><span class="bolded">My Instruments: </span> <input type="text" [(ngModel)]="userEdit.instruments" name="instruments"/></p>
-            <p><span class="bolded">Genre: </span><input type="text"  [(ngModel)]="userEdit.genres" name="genre"/></p>
+            <p><span class="bolded">My Instruments: </span> <select [(ngModel)]="userEdit.instrument" name="instrument">
+                <option>Guitar</option>
+                <option>Piano</option>
+                <option>Drums</option>
+                <option>Flute</option>
+                <option>Clarinet</option>
+                <option>Bass</option>
+                <option>Triangle</option>
+                <option>Cowbell</option>
+                <option>Theremin</option>
+                <option>Saxophone</option>
+            </select></p>
+            <p><span class="bolded">Genre: </span><select  [(ngModel)]="userEdit.genre" name="genre">
+                <option>Pop</option>
+                <option>Rock</option>
+                <option>Blues</option>
+                <option>Electronic</option>
+                <option>Jam</option>
+                <option>Rap</option>
+                <option>Indie</option>
+                <option>Americana</option>
+                <option>Folk</option>
+                <option>Jazz</option>
+            </select></p>
             <p><span class="bolded">My Email: </span> <input type="text" [(ngModel)]="userEdit.display_email" name="email" /></p>
             <p><span class="bolded">About Me: </span><input type="textarea"  [(ngModel)]="userEdit.about" name="about"/></p>
         <div class="letsjamButton">
