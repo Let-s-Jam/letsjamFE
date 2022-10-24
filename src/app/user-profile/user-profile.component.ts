@@ -24,7 +24,7 @@ export class UserProfileComponent implements OnInit {
       this.userService.getUserProfile().subscribe((data: any) => {
       console.log('user profile', data)
       this.user = data.attributes
-      console.log("username", this.user.name)
+      // console.log("username", this.user.name)
 
       })
     
