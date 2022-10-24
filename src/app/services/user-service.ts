@@ -9,24 +9,23 @@ import { Observable } from 'rxjs';
 export class UserService {
   constructor(private http: HttpClient) { }
 
-  getJammers() {
-    return this.http.get('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1/search?instrument=guitar');
-  }
+  // getJammers() {
+  //   return this.http.get('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1/search?instrument=guitar');
+  // }
 
   getUserProfile() {
     return this.http.get('https://letusjam.herokuapp.com/api/v1/users/1');
   }
 
-  getIncomingJammerProfiles() {
-    return this.http.get('https://1d9a3efd-bdd5-4feb-baad-39d400f80776.mock.pstmn.io/api/v1/user/1/connections');
+  // getIncomingJammerProfiles() {
+  //   return this.http.get('https://letusjam.herokuapp.com/api/v1/users/1');
   
 
-  }
+  // }
 
   updateProfile(user: object) {
       return this.http.patch('https://letusjam.herokuapp.com/api/v1/users/1', user,
-    
-      );
+      )
   }
 
  }

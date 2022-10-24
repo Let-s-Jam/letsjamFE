@@ -41,7 +41,7 @@ export class UserEditComponent implements OnInit {
  
   submit(): void {
     this.updateEdit.emit(false)
-
+    this.userService.updateProfile(this.userEdit)
     console.log(this.userEdit, "user")
     // this.userEdit$ = this.http
     

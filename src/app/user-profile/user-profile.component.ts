@@ -23,7 +23,7 @@ export class UserProfileComponent implements OnInit {
   ngOnInit(): void {
       this.userService.getUserProfile().subscribe((data: any) => {
       console.log('user profile', data)
-      this.user = data.data[0].attributes
+      this.user = data.attributes
       console.log("username", this.user.name)
 
       })
