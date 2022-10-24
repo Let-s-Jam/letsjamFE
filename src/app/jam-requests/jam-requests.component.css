@@ -3,9 +3,11 @@
     flex-direction: row;
     color: rgb(80, 92, 103);
     align-items: center;
-    height: 20vh;
+    height: 34vh;
     width: 5vw;
     justify-content: space-between;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .jamRequests {
@@ -17,15 +19,14 @@
     margin-bottom: 1em;
     margin-top: 0%;
     justify-content: space-between
-
 }
 
 .box {
     border-radius: 10px;
     border: solid 2px lightgrey;
-    box-shadow:rgb(80, 92, 103);
+    box-shadow: rgb(80, 92, 103);
     padding: 1rem;
-    max-height: 500px;
+    height: 77vh;
     overflow-y: auto;
     scrollbar-gutter: stable;
     scrollbar-color: #6969dd #e0e0e0;
@@ -54,9 +55,10 @@
     align-content: center;
     justify-content: center;
     padding-left: 2em;
-    height: 10em;
-    width: 28em;
+    height: 10vh;
+    width: 11vw;
     border-radius: 20px;
+    font-size: 2vh;
 }
 
 button {
@@ -70,8 +72,9 @@ button {
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     font-family: 'Cute Font', cursive;
-    font-size: x-large;
-    
+    font-size: large;
+
+
 
 
 
@@ -85,7 +88,7 @@ button:hover {
 
 .bolded {
     font-weight: bolder;
-    font-size: xx-large;
+    font-size: x-large;
     font-family: 'Cute Font', cursive;
 
 }
@@ -93,31 +96,36 @@ button:hover {
 .flexDiv {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
-   
+    justify-content: space-between;
+
 
 }
+
 .letsjamButton {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     width: 12em;
-    margin-left: 10vw;
+    margin-left: 2vw;
 }
+
 p {
     margin: 0px;
 }
+
 li {
- list-style: none;
+    list-style: none;
 }
+
 img {
-  
+
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
-    height: 20vh;
+    height: 34vh;
     width: auto;
 }
+
 h2 {
     font-family: Cute Font, cursive;
     font-size: 3em;

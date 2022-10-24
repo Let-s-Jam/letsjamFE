@@ -10,7 +10,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 4vw;
+ 
+    /* margin: 2vw; */
     
 }
 
