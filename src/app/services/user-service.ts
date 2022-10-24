@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserEditComponent } from '../user-edit/user-edit.component';
 import { Observable } from 'rxjs';
-
+import { updatedUser } from '../user-edit/user-edit.component';
 @Injectable()
 
 
@@ -21,11 +21,13 @@ export class UserService {
     return this.http.get('http://letusjam.herokuapp.com/api/v1/users/1/connections');
   }
 
-  updateProfile(user: object) {
-      return this.http.patch('http://letusjam.herokuapp.com/api/v1/users/1', user,
-      )
-  }
-
+  updateProfile(user: updatedUser) {
+        const options =  {
+          headers: new HttpHeaders({
+          "Content-Type": "application/json",
+        }),
+    }
+    return this.http.patch<any>('http://letusjam.herokuapp.com/api/v1/users/1', user, options)
  }
  
 
@@ -56,3 +58,4 @@ export class UserService {
 
   //understand dependency injections
   //understand how the userservice is getting injected
+}
