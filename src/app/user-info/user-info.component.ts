@@ -1,5 +1,26 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { UserService } from '../services/user-service';
+
+interface User {
+  id: number,
+  name: string,
+  display_email: string,
+  about: string,
+  zipcode: number,
+  picture_url: string,
+  instruments: object[],
+  needs_instruments: object[],
+  genres: object[]
+}
+interface Instruments {
+  id: number,
+  name: string
+}
+interface Genres {
+  id: number,
+  name: string
+}
+
 @Component({
   selector: 'app-user-info',
   templateUrl: './user-info.component.html',
@@ -8,9 +29,23 @@ import { UserService } from '../services/user-service';
 export class UserInfoComponent implements OnInit {
 
   @Output() updateEdit = new EventEmitter<boolean>();
-  public user: any
-  public instrument:any
-  public genre:any
+
+  public user: User =  {
+  id: 0,
+  name: "",
+  display_email: "",
+  about: "",
+  zipcode: 0,
+  picture_url: "",
+  instruments: [],
+  needs_instruments: [],
+  genres: []
+  }
+
+  public instrument: any
+
+  public genre: any
+
   constructor(private userService: UserService) { 
 
   }
@@ -18,7 +53,6 @@ export class UserInfoComponent implements OnInit {
     this.userService.getUserProfile().subscribe((data: any) => {
       console.log('user profile', data)
       this.user = data.data.attributes
-      console.log("username", this.user.name)
       this.instrument = data.data.attributes.instrument
       this.genre = data.data.attributes.genre
     })
