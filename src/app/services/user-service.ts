@@ -14,7 +14,7 @@ export class UserService {
   // }
 
   getUserProfile() {
-    return this.http.get('https://letusjam.herokuapp.com/api/v1/users/1');
+    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/1');
   }
 
   // getIncomingJammerProfiles() {

@@ -17,10 +17,10 @@ export class UserInfoComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getUserProfile().subscribe((data: any) => {
       console.log('user profile', data)
-      this.user = data.attributes
+      this.user = data.data.attributes
       console.log("username", this.user.name)
-      this.instrument = data.attributes.instrument
-      this.genre = data.attributes.genre
+      this.instrument = data.data.attributes.instrument
+      this.genre = data.data.attributes.genre
     })
   }
   switchView() {
