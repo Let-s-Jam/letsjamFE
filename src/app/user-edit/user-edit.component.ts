@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserService } from '../services/user-service';
 import { HttpClient, HttpParams } from '@angular/common/http';
-interface updatedUser {
+export interface updatedUser {
   name: string;
   display_email: string,
   zipcode: number,
@@ -41,8 +41,10 @@ export class UserEditComponent implements OnInit {
  
   submit(): void {
     this.updateEdit.emit(false)
-    this.userService.updateProfile(this.userEdit)
-    console.log(this.userEdit, "user")
+    this.userService.updateProfile(this.userEdit).subscribe((data: any) => {
+    console.log(data)
+    this.updateEdit = data.data.attributes
+    })
     // this.userEdit$ = this.http
     
       
