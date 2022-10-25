@@ -13,11 +13,12 @@ public searchResultName: any = ""
 public searchResultInstrument: any = ""
 public searchResultGenre: any = ""
 public searchResultDistance: any = ""
-public searchResultValues: String[] = [this.searchResultName, this.searchResultInstrument, this.searchResultGenre, this.searchResultDistance]
+public searchResultValues: String[] = []
 
 @Output() valuesToEmit = new EventEmitter<Array<String>>();
 
-  constructor() { }
+  constructor() { 
+  }
   home = true;
   switchView() {
     this.home = false;
@@ -26,7 +27,17 @@ public searchResultValues: String[] = [this.searchResultName, this.searchResultI
   }
 
   submitSearchResults() {
+
+    if (this.searchResultName){this.searchResultValues.push(`name=${this.searchResultName}`)}
+    if (this.searchResultInstrument){this.searchResultValues.push(`instrument=${this.searchResultInstrument}`)}
+    if (this.searchResultGenre){this.searchResultValues.push(`genre=${this.searchResultGenre}`)}
+    if (this.searchResultDistance){this.searchResultValues.push(`distance=${this.searchResultDistance}`)}
     this.valuesToEmit.emit(this.searchResultValues)
+    console.log(this.searchResultName)
+    console.log(this.searchResultInstrument)
+    console.log(this.searchResultGenre)
+    console.log(this.searchResultDistance)
+    console.log(this.searchResultValues)
   }
 
 }
