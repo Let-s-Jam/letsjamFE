@@ -1,6 +1,6 @@
 <form> 
-    <input type="text" [(ngModel)]="searchResultName" placeholder="name">
-    <select title="instrument" defaultValue="instrument">
+    <input type="text" name="name" [(ngModel)]="searchResultName" placeholder="name">
+    <select title="instrument" name="instrument" [(ngModel)]="searchResultInstrument" defaultValue="instrument">
         <option>instrument</option>
         <option>Guitar</option>
         <option>Piano</option>
@@ -13,7 +13,7 @@
         <option>Theremin</option>
         <option>Saxophone</option>
     </select>
-    <select  title="genre" defaultValue="genre">
+    <select  title="genre" name="genre" [(ngModel)]="searchResultGenre" defaultValue="genre">
         <option>genre</option>
         <option>Pop</option>
         <option>Rock</option>
@@ -26,7 +26,7 @@
         <option>Folk</option>
         <option>Jazz</option>
     </select>
-    <select  title="distance" defaultValue="distance">
+    <select  title="distance" name="distance" [(ngModel)]="searchResultDistance" defaultValue="distance">
         <option>distance</option>
         <option>0-5</option>
         <option>0-10</option>
@@ -36,7 +36,7 @@
         <option>25-50</option>
         <option>50+</option>
     </select>
-    <button (click)="switchView()" type="submit" name="search">Search for Jammers</button>
+    <button (click)="submitSearchResults()" type="submit" name="search">Search for Jammers</button>
 </form >
 
 <!-- v  -->
