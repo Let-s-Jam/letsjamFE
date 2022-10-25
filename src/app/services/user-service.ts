@@ -14,11 +14,11 @@ export class UserService {
   }
 
   getUserProfile() {
-    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/2/');
+    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/3/');
   }
 
   getIncomingJammerProfiles() {
-    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/1/connections/');
+    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/3/connections/');
   }
 
   updateProfile(user: updatedUser) {
@@ -29,7 +29,14 @@ export class UserService {
     }
     return this.http.patch<any>('http://letusjam.herokuapp.com/api/v1/users/', user, options)
  }
- 
+
+ sendJammerSearchParams(params: string) {
+   return this.http.get(`http://letusjam.herokuapp.com/api/v1/users/3/search?${params}`)
+ }
+
+ // /api/v1 / users /: user_id / search ? name = steve & instrument=sax
+  // name = Emma & instrument=Piano& genre=Pop & distance=0 - 5
+
 
 // userEdit$ = new Observable(observer => {
 //   fetch('https://pokeapi.co/api/v2/pokemon/pikachu')

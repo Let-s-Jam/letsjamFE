@@ -1,9 +1,11 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { UserService } from '../services/user-service';
 
 @Component({
   selector: 'app-searchbar',
   templateUrl: './searchbar.component.html',
-  styleUrls: ['./searchbar.component.css']
+  styleUrls: ['./searchbar.component.css'],
+  providers: [ UserService ]
 })
 export class SearchbarComponent implements OnInit {
 
@@ -17,7 +19,7 @@ public searchResultValues: String[] = []
 
 @Output() valuesToEmit = new EventEmitter<String>();
 
-  constructor() { 
+  constructor(private userService: UserService) { 
   }
   home = true;
   switchView() {
@@ -40,6 +42,7 @@ public searchResultValues: String[] = []
     console.log(this.searchResultDistance)
     console.log(this.searchResultValues)
     console.log(valuesToSend) //)
+    this.userService.sendJammerSearchParams(valuesToSend)
   }
 
 }
