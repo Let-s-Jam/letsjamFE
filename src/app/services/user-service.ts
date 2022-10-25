@@ -1,16 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserEditComponent } from '../user-edit/user-edit.component';
-import { Observable } from 'rxjs';
+import { Observable, ReplaySubject } from 'rxjs';
 import { updatedUser } from '../user-edit/user-edit.component';
+
 @Injectable()
 
 
 export class UserService {
-  constructor(private http: HttpClient) { }
+
+  public searchedUserEmitter: ReplaySubject<any[]>;
+
+  constructor(private http: HttpClient) { 
+    this.searchedUserEmitter = new ReplaySubject<any>(1)
+  }
+
 
   getJammers() {
-    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/');
+    return this.http.get(`http://letusjam.herokuapp.com/api/v1/users/`);
   }
 
   getUserProfile() {
@@ -31,8 +38,26 @@ export class UserService {
  }
 
  sendJammerSearchParams(params: string) {
-   return this.http.get(`http://letusjam.herokuapp.com/api/v1/users/3/search?${params}`)
+    this.http.get(`http://letusjam.herokuapp.com/api/v1/users/3/search?${params}`).subscribe({
+      next: (returnedJammers: any) => {
+        this.searchedUserEmitter.next(returnedJammers);
+      },
+      error: err => {
+        console.log('error occurred in http request for autoresponses:');
+        console.log(err);
+        console.log('err.message:');
+        console.log(err.message);
+      }
+    })
  }
+
+ //make sure the data coming back from the emitter is compatible with founds
+
+ 
+
+ //subscribe to the reuest 
+ //from jammers emit the updated list
+ //
 
  // /api/v1 / users /: user_id / search ? name = steve & instrument=sax
   // name = Emma & instrument=Piano& genre=Pop & distance=0 - 5

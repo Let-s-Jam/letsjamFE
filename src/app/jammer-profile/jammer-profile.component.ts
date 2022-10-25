@@ -12,6 +12,8 @@ interface SearchResults {
   genres: object[]
 }
 
+//we need to subscribe to the emitting component
+
 interface Instruments {
   name: any,
   id: any
@@ -53,8 +55,14 @@ public genres: any
   // founds = FOUNDJAMMERS.data[0].results.found_users;
 
   ngOnInit(): void {
-    this.userService.getJammers().subscribe((data: any) => {
+    this.userService.searchedUserEmitter.subscribe((data: any) => {
       console.log('search results', data)
+      this.founds = data
+      this.instruments = data.instruments
+      this.genres = data.genres
+    })
+    this.userService.getJammers().subscribe((data: any) => {
+      console.log('all user search results', data)
       this.founds = data
       this.instruments = data.instruments
       this.genres = data.genres
