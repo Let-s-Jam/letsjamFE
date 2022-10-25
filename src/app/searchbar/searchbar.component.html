@@ -1,5 +1,5 @@
 <form> 
-    <input type="text" placeholder="name">
+    <input type="text" [(ngModel)]="searchResultName" placeholder="name">
     <select title="instrument" defaultValue="instrument">
         <option>instrument</option>
         <option>Guitar</option>
@@ -37,4 +37,6 @@
         <option>50+</option>
     </select>
     <button (click)="switchView()" type="submit" name="search">Search for Jammers</button>
-</form>
+</form >
+
+<!-- v  -->

@@ -9,6 +9,8 @@ import { JammerProfileComponent } from '../jammer-profile/jammer-profile.compone
 export class ResultsPageComponent implements OnInit {
   // @Input() navbar?: SearchbarComponent;
 
+
+
   constructor() { }
 
   ngOnInit(): void {

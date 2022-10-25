@@ -69,6 +69,39 @@ public genres: any
 
 }
 
+//***
+//public -> declare all the variables then declare another variable that is an array of those variables
+//you will need to do an if statement to see if those contain a value, also you have to reset after every search
+//we wil then iterate thru that array for every single one that has a value, add it to the end plus an ampersand
+//we need a conditional to check if it's just one thing long it doesnt need the ampersand 
+//***/
+
+
+
+
+
+
+
+
+
 //use a service to inject into the component
 //service encapsulates any communication w the server
 //could do a single service with everything in it, or multiple services if you're using different endpoints
+
+//v
+
+//iterate thru array in the function that gathers values from the form
+//for each of those, add a ${&instrument=${guitar}}
+
+//store in an object so it has keys and values
+// take those key and value pairs and create an array which we iterate thru
+
+//multiple variables, instrument variable genre variable disyance wvariable and ame variable,
+//we can add those variables into an array, for each thing if there is a value add it to the end of the string which becomes the uri
+
+
+
+// getting the value from the form genre:${genreformvalue}
+// conditional logic to see if each genre/instrument/etc. needs to be included because is has info
+// ${instrument=saxophone}
+// name=steve&instrument=sax
