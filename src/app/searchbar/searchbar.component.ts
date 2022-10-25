@@ -1,9 +1,11 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { UserService } from '../services/user-service';
 
 @Component({
   selector: 'app-searchbar',
   templateUrl: './searchbar.component.html',
-  styleUrls: ['./searchbar.component.css']
+  styleUrls: ['./searchbar.component.css'],
+  providers: [ UserService ]
 })
 export class SearchbarComponent implements OnInit {
 
@@ -15,9 +17,9 @@ public searchResultGenre: any = ""
 public searchResultDistance: any = ""
 public searchResultValues: String[] = []
 
-@Output() valuesToEmit = new EventEmitter<Array<String>>();
+@Output() valuesToEmit = new EventEmitter<String>();
 
-  constructor() { 
+  constructor(private userService: UserService) { 
   }
   home = true;
   switchView() {
@@ -32,12 +34,15 @@ public searchResultValues: String[] = []
     if (this.searchResultInstrument){this.searchResultValues.push(`instrument=${this.searchResultInstrument}`)}
     if (this.searchResultGenre){this.searchResultValues.push(`genre=${this.searchResultGenre}`)}
     if (this.searchResultDistance){this.searchResultValues.push(`distance=${this.searchResultDistance}`)}
-    this.valuesToEmit.emit(this.searchResultValues)
+    const valuesToSend:string = this.searchResultValues.join('&')
+    this.valuesToEmit.emit(valuesToSend)
     console.log(this.searchResultName)
     console.log(this.searchResultInstrument)
     console.log(this.searchResultGenre)
     console.log(this.searchResultDistance)
     console.log(this.searchResultValues)
+    console.log(valuesToSend) //)
+    this.userService.sendJammerSearchParams(valuesToSend)
   }
 
 }
