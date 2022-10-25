@@ -6,8 +6,8 @@
         <div class="UserInfo" *ngIf="user">
             <p><span class="bolded">Name: </span> {{user.name}}</p>
             <p><span class="bolded">Jam ZIP Code: </span> {{user.zipcode}}</p>
-            <span class="bolded">My Instruments: </span> <p *ngFor="let instrument of instrument; index as i" class="instruments"> {{instrument[i].name}} </p>
-            <span class="bolded">Genres: </span> <p *ngFor="let genre of genre; index as i" class="genres">{{genre[i].name}}</p>
+            <span class="bolded">My Instruments: </span> <p *ngFor="let instrumentt of instrument; index as i" class="instruments"> {{instrument[instrument.length].name}} </p>
+            <span class="bolded">Genres: </span> <p *ngFor="let genree of genre; index as i" class="genres">{{genre[genre.length].name}}</p>
             <p><span class="bolded">My Email: </span> {{user.display_email}}</p>
             <p><span class="bolded">About Me: </span> {{user.about}} </p>
         </div>

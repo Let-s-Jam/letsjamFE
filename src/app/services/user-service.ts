@@ -14,11 +14,11 @@ export class UserService {
   }
 
   getUserProfile() {
-    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/1');
+    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/1/');
   }
 
   getIncomingJammerProfiles() {
-    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/1/connections');
+    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/1/connections/');
   }
 
   updateProfile(user: updatedUser) {
@@ -27,7 +27,7 @@ export class UserService {
           "Content-Type": "application/json",
         }),
     }
-    return this.http.patch<any>('http://letusjam.herokuapp.com/api/v1/users/1', user, options)
+    return this.http.patch<any>('http://letusjam.herokuapp.com/api/v1/users/1/', user, options)
  }
  
 
