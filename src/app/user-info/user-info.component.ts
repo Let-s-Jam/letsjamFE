@@ -8,9 +8,9 @@ interface User {
   about: string,
   zipcode: number,
   picture_url: string,
-  instruments: object[],
+  instrument: string,
   needs_instruments: object[],
-  genres: object[]
+  genre: string
 }
 interface Instruments {
   id: number,
@@ -37,9 +37,9 @@ export class UserInfoComponent implements OnInit {
   about: "",
   zipcode: 0,
   picture_url: "",
-  instruments: [],
+  instrument: "",
   needs_instruments: [],
-  genres: []
+  genre: ""
   }
 
   public instrument: any

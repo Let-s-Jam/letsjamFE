@@ -41,7 +41,7 @@ public founds: SearchResults[] = [{
   ngOnInit(): void {
     this.userService.getJammers().subscribe((data: any) => {
       console.log('search results', data)
-      this.founds = data.data[0].results.found_users
+      this.founds = data.data.results.found_users
     })
   }
 
