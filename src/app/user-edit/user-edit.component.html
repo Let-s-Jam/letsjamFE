@@ -6,7 +6,7 @@
         <form class="UserEdit">
             <p><span class="bolded">Name: </span> <input type="text" [(ngModel)]="userEdit.name" name="name" /></p>
             <p><span class="bolded">Jam ZIP Code: </span> <input type="text" [(ngModel)]="userEdit.zipcode" name="zipcode" /></p>
-            <p><span class="bolded">My Instruments: </span> <select [(ngModel)]="userEdit.instrument" name="instrument">
+            <p><span class="bolded">My Instruments: </span> <select [(ngModel)]="userEdit.instruments" name="instrument">
                 <option>Guitar</option>
                 <option>Piano</option>
                 <option>Drums</option>
@@ -18,7 +18,7 @@
                 <option>Theremin</option>
                 <option>Saxophone</option>
             </select></p>
-            <p><span class="bolded">Genre: </span><select  [(ngModel)]="userEdit.genre" name="genre">
+            <p><span class="bolded">Genre: </span><select  [(ngModel)]="userEdit.genres" name="genre">
                 <option>Pop</option>
                 <option>Rock</option>
                 <option>Blues</option>

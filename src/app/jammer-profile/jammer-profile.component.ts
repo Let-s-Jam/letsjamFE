@@ -12,6 +12,16 @@ interface SearchResults {
   genres: object[]
 }
 
+interface Instruments {
+  name: any,
+  id: any
+}
+
+interface Genres {
+  name: any,
+  id: any
+}
+
 @Component({
   selector: 'app-jammer-profile',
   templateUrl: './jammer-profile.component.html',
@@ -32,6 +42,10 @@ public founds: SearchResults[] = [{
   genres: []
 }]
 
+public instruments: any
+
+public genres: any
+
   constructor(private userService: UserService) { 
     //this adds userService obviously lol
   }
@@ -42,6 +56,8 @@ public founds: SearchResults[] = [{
     this.userService.getJammers().subscribe((data: any) => {
       console.log('search results', data)
       this.founds = data
+      this.instruments = data.instruments
+      this.genres = data.genres
     })
   }
 
