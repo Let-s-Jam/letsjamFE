@@ -17,6 +17,7 @@ public searchResultGenre: any = ""
 public searchResultDistance: any = ""
 public searchResultValues: String[] = []
 
+// @Input() value: string | undefined
 @Output() valuesToEmit = new EventEmitter<String>();
 
   constructor(private userService: UserService) { 
@@ -35,7 +36,7 @@ public searchResultValues: String[] = []
     if (this.searchResultGenre){this.searchResultValues.push(`genre=${this.searchResultGenre}`)}
     if (this.searchResultDistance){this.searchResultValues.push(`distance=${this.searchResultDistance}`)}
     const valuesToSend:string = this.searchResultValues.join('&')
-    this.valuesToEmit.emit(valuesToSend)
+    // this.valuesToEmit.emit(valuesToSend)
     console.log(this.searchResultName)
     console.log(this.searchResultInstrument)
     console.log(this.searchResultGenre)
