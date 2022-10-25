@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    background-color: #212223;
+}
+
+.bolded, p, h2 {
+    color: #505C67;
+}
+
+h2 {
+    font-family: 'Cute Font', cursive;
+    font-size: xx-large
+}

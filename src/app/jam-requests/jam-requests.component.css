@@ -23,7 +23,7 @@
 
 .box {
     border-radius: 10px;
-    border: solid 2px lightgrey;
+    border: solid 1px lightgrey;
     box-shadow: rgb(80, 92, 103);
     padding: 1rem;
     height: 77vh;
