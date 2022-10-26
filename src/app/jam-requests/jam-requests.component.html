@@ -15,8 +15,8 @@
                 <p><span class="bolded">About Me: </span> {{requests[i].about}} </p>
             </div>
             <div class="letsjamButton">
-                <button class="acceptJamRequest">Let's Jam!</button>
-                <button class="denyJamRequest">Nah!</button>
+                <button (click)="this.acceptJammer(requests[i].id)" class="acceptJamRequest">Let's Jam!</button>
+                <!-- <button name={{requests[i].id}} (click)="this.denyJammer(requests[i].id)">Nah!</button> -->
             </div>
         </div>
     </div>

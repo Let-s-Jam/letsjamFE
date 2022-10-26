@@ -63,4 +63,11 @@ export class JamRequestsComponent implements OnInit {
     })
   }
 
+  acceptJammer(id: number) {
+    this.userService.acceptRequest(id).subscribe((data: any) => {
+      console.log('patch response: ', data)
+      
+    })
+  }
+
 }

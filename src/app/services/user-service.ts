@@ -75,6 +75,7 @@ export class UserService {
      return this.http.post<any>(`https://letusjam.herokuapp.com/api/v1/users/3/connections/${id}`, '')
   }
 
+
  //make sure the data coming back from the emitter is compatible with founds
 
  
