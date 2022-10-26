@@ -59,6 +59,18 @@ export class UserService {
     })
  }
 
+ acceptRequest(id: number) {
+     Headers: new HttpHeaders({
+       "Content-Type": "application/json",
+       "Accept": "application/json",
+     })
+ 
+   return this.http.patch<any>(`https://letusjam.herokuapp.com/api/v1/users/3/connections/${id}/`, 
+     {
+       "status": "APPROVED"
+     })
+}
+
  //make sure the data coming back from the emitter is compatible with founds
 
  
