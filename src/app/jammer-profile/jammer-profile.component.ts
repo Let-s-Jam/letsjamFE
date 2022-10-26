@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
 import { UserService } from '../services/user-service';
 
 interface SearchResults {
@@ -27,8 +27,7 @@ interface Genres {
 @Component({
   selector: 'app-jammer-profile',
   templateUrl: './jammer-profile.component.html',
-  styleUrls: ['./jammer-profile.component.css'],
-  providers: [UserService]
+  styleUrls: ['./jammer-profile.component.css']
   //how we're telling the component that userservice should be created directly from the class
 })
 export class JammerProfileComponent implements OnInit {
@@ -50,6 +49,7 @@ public genres: any
 
   constructor(private userService: UserService) { 
     //this adds userService obviously lol
+    console.log('this.userserevice', this.userService)
   }
 
   // founds = FOUNDJAMMERS.data[0].results.found_users;
@@ -57,16 +57,28 @@ public genres: any
   ngOnInit(): void {
     this.userService.searchedUserEmitter.subscribe((data: any) => {
       console.log('search results', data)
-      this.founds = data
-      this.instruments = data.instruments
-      this.genres = data.genres
+      this.founds = []
+      for(let i = 0; i< data.length; i++){
+        this.founds.push({
+          ...data[i].attributes,
+          instruments: data[i].attributes.instruments.map((instrument:any) => instrument.name),
+          genres: data[i].attributes.genres.map((genre:any) => genre.name)
+        });
+      };
     })
+
     this.userService.getJammers().subscribe((data: any) => {
       console.log('all user search results', data)
-      this.founds = data
-      this.instruments = data.instruments
-      this.genres = data.genres
+      this.founds = []
+      for(let i = 0; i< data.length; i++){
+        this.founds.push({
+          ...data[i],
+          instruments: data[i].instruments.map((instrument:any) => instrument.name),
+          genres: data[i].genres.map((genre:any) => genre.name)
+        });
+      };
     })
+    console.log('searcheduseremitter', this.userService.searchedUserEmitter)
   }
 
   // data is the repsonse from the server

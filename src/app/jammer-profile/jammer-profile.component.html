@@ -7,9 +7,9 @@
     <div class="flexDiv">
         <div class="jammerInfo">
             <p><span class="bolded">Name: </span>{{founds[i].name}}</p>
-            <p><span class="bolded">Instruments: </span>{{founds[i].instruments}}</p>
+            <p><span class="bolded">Instruments: </span>{{founds[i].instruments.join(",")}}</p>
             <p><span class="bolded">Looking for Instruments: </span>{{founds[i].needs_instruments}}</p>
-            <p><span class="bolded">Genre: </span> {{founds[i].genres}}</p>
+            <p><span class="bolded">Genre: </span> {{founds[i].genres.join(",")}}</p>
             <p><span class="bolded">Distance: </span>{{founds[i].zipcode}}</p>
             <p><span class="bolded">About Me: </span> {{founds[i].about}}</p>
         </div>

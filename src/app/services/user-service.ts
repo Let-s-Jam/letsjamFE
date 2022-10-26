@@ -4,7 +4,9 @@ import { UserEditComponent } from '../user-edit/user-edit.component';
 import { Observable, ReplaySubject } from 'rxjs';
 import { updatedUser } from '../user-edit/user-edit.component';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 
 
 export class UserService {
@@ -12,7 +14,11 @@ export class UserService {
   public searchedUserEmitter: ReplaySubject<any[]>;
 
   constructor(private http: HttpClient) { 
-    this.searchedUserEmitter = new ReplaySubject<any>(1)
+    this.searchedUserEmitter = new ReplaySubject<any[]>(1)
+    this.searchedUserEmitter.subscribe((data: any) => {
+      console.log('search results', data)
+    })
+    console.log('this label from userservice', this)
   }
 
 
@@ -40,7 +46,9 @@ export class UserService {
  sendJammerSearchParams(params: string) {
     this.http.get(`http://letusjam.herokuapp.com/api/v1/users/3/search?${params}`).subscribe({
       next: (returnedJammers: any) => {
-        this.searchedUserEmitter.next(returnedJammers);
+        const searchedJammersArray = returnedJammers.data
+        this.searchedUserEmitter.next(searchedJammersArray)
+        console.log('label', returnedJammers);
       },
       error: err => {
         console.log('error occurred in http request for autoresponses:');
