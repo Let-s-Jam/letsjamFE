@@ -23,16 +23,7 @@ interface Requests {
 })
 export class JamRequestsComponent implements OnInit {
 
-  public requests: Requests[] = [{
-    id: 0,
-    name:"",
-    about: "",
-    zipcode: 0,
-    picture_url: "",
-    instruments: [],
-    needs_instruments: [],
-    genres: [],
-  }];
+  public requests: Requests[] = []
 
   public instruments: any;
   public genres: any;
@@ -54,12 +45,20 @@ export class JamRequestsComponent implements OnInit {
     
   }
     
-    
+  onClick() {
+    console.log("click")
+  }
 
   acceptJammer(id: number) {
+    console.log('this.requests after the patch', this.requests)
     this.userService.acceptRequest(id).subscribe((data: any) => {
-      console.log('patch response: ', data)
-      
+     const requestIndex =  this.requests.findIndex(request => request.id === id)
+     console.log(requestIndex)
+    console.log(this.requests)
+     this.requests.splice(requestIndex, 1)
+     console.log(this.requests)
+
+     //trigger something that gets this thing removed from the component
     })
   }
 
