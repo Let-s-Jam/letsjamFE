@@ -5,7 +5,7 @@ interface SearchResults {
   id: number,
   name: string,
   about: string,
-  zipcode: number,
+  distance: number | any,
   picture_url: string,
   instruments: object[],
   needs_instruments: object[],
@@ -36,7 +36,7 @@ public founds: SearchResults[] = [{
   id: 0,
   name:"",
   about: "",
-  zipcode: 0,
+  distance: 0,
   picture_url: "",
   instruments: [],
   needs_instruments: [],
@@ -72,9 +72,9 @@ public genres: any
       this.founds = []
       for(let i = 0; i< data.length; i++){
         this.founds.push({
-          ...data[i],
-          instruments: data[i].instruments.map((instrument:any) => instrument.name),
-          genres: data[i].genres.map((genre:any) => genre.name)
+          ...data[i].attributes,
+          instruments: data[i].attributes.instruments.map((instrument:any) => instrument.name),
+          genres: data[i].attributes.genres.map((genre:any) => genre.name)
         });
       };
     })
