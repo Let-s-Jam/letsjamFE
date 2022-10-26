@@ -5,7 +5,7 @@ import { UserService } from '../services/user-service';
   selector: 'app-searchbar',
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.css'],
-  providers: [ UserService ]
+
 })
 export class SearchbarComponent implements OnInit {
 
@@ -44,6 +44,7 @@ public searchResultValues: String[] = []
     console.log(this.searchResultValues)
     console.log(valuesToSend) //)
     this.userService.sendJammerSearchParams(valuesToSend)
+    this.searchResultValues = []
   }
 
 }
