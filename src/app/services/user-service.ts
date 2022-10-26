@@ -23,7 +23,7 @@ export class UserService {
 
 
   getJammers() {
-    return this.http.get(`http://letusjam.herokuapp.com/api/v1/users/3/search`);
+    return this.http.get(`http://letusjam.herokuapp.com/api/v1/users/3/search?`);
   }
 
   getUserProfile() {
