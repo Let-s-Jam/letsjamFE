@@ -1,6 +1,6 @@
 <h2>Matches: </h2>
 <ul class="box">
-    <li *ngFor="let found of founds; index as i" class="jammerProfile">
+    <li *ngFor="let found of founds; index as i, let id of ids; index as o" class="jammerProfile">
     <div class="profileImage">
         <img class="image" src="../assets/cat.png">
     </div>
@@ -14,7 +14,7 @@
             <p><span class="bolded">About Me: </span> {{founds[i].about}}</p>
         </div>
         <div class="letsjamButton">
-            <button>Let's Jam!</button>
+            <button (click)="this.addUser(ids[o])">Let's Jam!</button>
         </div>
     </div>
     </li>

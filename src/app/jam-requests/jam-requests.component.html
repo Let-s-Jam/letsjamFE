@@ -1,7 +1,7 @@
 
 
 <ul class="box">
-  <li *ngFor="let request of requests; index as i" class="jamRequests">
+  <li *ngFor="let request of requests; index as i, let instrument of instruments; index as o, let genre of genres; index as p" class="jamRequests">
     <div class="jammerProfile">
         <div class="profileImage">
             <img height="300px" width="300px" src={{requests[i].picture_url}}>
@@ -9,9 +9,9 @@
         <div class="flexDiv">
             <div class="jammerInfo">
                 <p><span class="bolded">Name: </span> {{requests[i].name}}</p>
-                <p><span class="bolded">Instrument: </span> {{requests[i].instruments}} </p>
+                <p><span class="bolded">Instrument: </span> {{requests[i].instruments[o].name}} </p>
                 <p><span class="bolded">Instrument: </span> {{requests[i].needs_instruments}} </p>
-                <p><span class="bolded">Genre: </span> {{requests[i].genres}}</p>
+                <p><span class="bolded">Genre: </span> {{requests[i].genres[p].name}}</p>
                 <p><span class="bolded">About Me: </span> {{requests[i].about}} </p>
             </div>
             <div class="letsjamButton">

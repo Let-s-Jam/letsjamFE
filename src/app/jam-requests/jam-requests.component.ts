@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user-service';
-
+interface Instruments {
+  id: number, 
+  name: string
+}
 interface Requests {
   id: number,
   name: string,
   about: string,
   zipcode: number,
   picture_url: string,
-  instruments: object[],
+  instruments: Instruments[],
   needs_instruments: object[],
-  genres: object[]
+  genres: Instruments[]
 }
 
 @Component({
@@ -31,12 +34,32 @@ export class JamRequestsComponent implements OnInit {
     genres: [],
   }];
 
+  public instruments: any;
+  public genres: any;
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     this.userService.getIncomingJammerProfiles().subscribe((data: any) => {
-      console.log('requests', data)
       this.requests = data.data.attributes.requests_pending
+      console.log(this.requests)
+      this.instruments = this.requests.map((request) => {
+        request.instruments
+      this.genres = this.requests.map((request) => {
+        request.genres
+      })
+      })
+      
+    })
+    
+    
+  }
+    
+    
+
+  acceptJammer(id: number) {
+    this.userService.acceptRequest(id).subscribe((data: any) => {
+      console.log('patch response: ', data)
+      
     })
   }
 
