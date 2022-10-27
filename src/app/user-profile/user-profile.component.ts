@@ -22,10 +22,7 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit(): void {
       this.userService.getUserProfile().subscribe((data: any) => {
-      console.log('user profile', data)
       this.user = data.attributes
-      // console.log("username", this.user.name)
-
       })
     
   }
@@ -34,17 +31,3 @@ export class UserProfileComponent implements OnInit {
     this.edit = value
   }
 }
-// public founds: any 
-
-//   constructor(private userService: UserService) { 
-//     //this adds userService obviously lol
-//   }
-
-//   // founds = FOUNDJAMMERS.data[0].results.found_users;
-
-//   ngOnInit(): void {
-//     this.userService.getJammers().subscribe((data: any) => {
-//       console.log(data)
-//       this.founds = data.data[0].results.found_users
-//     })
-//   }

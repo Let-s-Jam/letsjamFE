@@ -40,7 +40,6 @@ export class AcceptedJammersComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getIncomingJammerProfiles().subscribe((data: any) => {
-      console.log('friends', data)
       this.friends = data.data.attributes.connections
     })
   }

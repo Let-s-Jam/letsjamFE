@@ -10,20 +10,9 @@ import { __values } from 'tslib';
 })
 
 export class ResultsPageComponent implements OnInit {
-
-  // public valuesToSend: string = ""
-
-  // @Input() emitValues = new EventEmitter<String>();
-
   constructor() { }
 
   ngOnInit(): void {
 
   }
-
-  // emitThoseValues() {
-  //   console.log("results page component valuestosend", this.valuesToSend)
-  //   this.emitValues.emit(this.valuesToSend)
-  // }
-
 }

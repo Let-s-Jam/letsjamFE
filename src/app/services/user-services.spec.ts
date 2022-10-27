@@ -11,12 +11,10 @@ describe('UserService', () => {
         imports: [HttpClientModule]
       });
   
-      service = TestBed.inject(UserService); // * inject service instance
+      service = TestBed.inject(UserService);
     });
   
     it('should be created', () => {
       expect(service).toBeTruthy();
     });
-  
-
   });

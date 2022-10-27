@@ -36,24 +36,13 @@ export class UserEditComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    // this.submit();
   }
  
   submit(): void {
     this.updateEdit.emit(false)
     this.userService.updateProfile(this.userEdit).subscribe((data: any) => {
-    console.log(data)
     this.updateEdit = data.data.attributes
     })
-    // this.userEdit$ = this.http
-    
-      
-
-    // this.userService.editProfile(this.userEdit).subscribe((userEdit: any) => {
-
-    // })
-    
-
    }
    
 

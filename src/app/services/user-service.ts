@@ -16,22 +16,20 @@ export class UserService {
   constructor(private http: HttpClient) { 
     this.searchedUserEmitter = new ReplaySubject<any[]>(1)
     this.searchedUserEmitter.subscribe((data: any) => {
-      console.log('search results', data)
     })
-    console.log('this label from userservice', this)
   }
 
 
   getJammers() {
-    return this.http.get(`https://letusjam.herokuapp.com/api/v1/users/4/search?`);
+    return this.http.get(`https://letusjam.herokuapp.com/api/v1/users/3/search?`);
   }
 
   getUserProfile() {
-    return this.http.get('https://letusjam.herokuapp.com/api/v1/users/4/');
+    return this.http.get('https://letusjam.herokuapp.com/api/v1/users/3/');
   }
 
   getIncomingJammerProfiles() {
-    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/4/connections/');
+    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/3/connections/');
   }
 
   updateProfile(user: updatedUser) {
@@ -40,15 +38,14 @@ export class UserService {
           "Content-Type": "application/json",
         }),
     }
-    return this.http.patch<any>('https://letusjam.herokuapp.com/api/v1/users/', user, options)
+    return this.http.patch<any>('https://letusjam.herokuapp.com/api/v1/users/3/', user, options)
  }
 
  sendJammerSearchParams(params: string) {
-    this.http.get(`https://letusjam.herokuapp.com/api/v1/users/4/search?${params}`).subscribe({
+    this.http.get(`https://letusjam.herokuapp.com/api/v1/users/3/search?${params}`).subscribe({
       next: (returnedJammers: any) => {
         const searchedJammersArray = returnedJammers.data
         this.searchedUserEmitter.next(searchedJammersArray)
-        console.log('label', returnedJammers);
       },
       error: err => {
         console.log('error occurred in http request for autoresponses:');
@@ -60,14 +57,14 @@ export class UserService {
  }
 
  acceptRequest(id: number) {
-   return this.http.patch<any>(`https://letusjam.herokuapp.com/api/v1/users/4/connections/${id}/`, 
+   return this.http.patch<any>(`https://letusjam.herokuapp.com/api/v1/users/3/connections/${id}/`, 
      {
        "status": "APPROVED"
      })
 }
 
  sendRequest(id: any) {
-     return this.http.post<any>(`https://letusjam.herokuapp.com/api/v1/users/4/connections/${id}`, '')
+     return this.http.post<any>(`https://letusjam.herokuapp.com/api/v1/users/3/connections/${id}`, '')
   }
 
 }

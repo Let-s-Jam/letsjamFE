@@ -31,7 +31,6 @@ import { FormsModule } from '@angular/forms'
     AppRoutingModule,
     HttpClientModule,
     FormsModule
-    //injecting an instance of the http client, components can inject that if they want
   ],
   providers: [],
   bootstrap: [AppComponent]
