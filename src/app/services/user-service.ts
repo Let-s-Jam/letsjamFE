@@ -29,7 +29,7 @@ export class UserService {
   }
 
   getIncomingJammerProfiles() {
-    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/3/connections/');
+    return this.http.get('https://letusjam.herokuapp.com/api/v1/users/3/connections/');
   }
 
   updateProfile(user: updatedUser) {
