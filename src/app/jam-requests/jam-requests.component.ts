@@ -65,12 +65,4 @@ export class JamRequestsComponent implements OnInit {
      //trigger something that gets this thing removed from the component
     })
   }
-
-  acceptJammer(id: number) {
-    this.userService.acceptRequest(id).subscribe((data: any) => {
-      console.log('patch response: ', data)
-      
-    })
-  }
-
 }
