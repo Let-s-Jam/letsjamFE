@@ -6,6 +6,8 @@ Let's Jam Front-End<br/><br/>
 
 Lets Jam is a community building web application that allows musicians or aspiring musicans to find other like minded musicians to jam with. A user can search for local Jammers in their area by name, instrument, genre, or distance. A user can also send other users "Jam Requests" in hopes to connect with them. A user can also edit their profile with the options of changing their instruments, genres, names or about me. Lastly, a user can view all of their connected friends in hopes to continue jamming with them in the future. 
 
+This application was built utilizing Angular and Typescript. 
+
 
 ## Development server
 
@@ -45,4 +47,17 @@ In this view, the user can scroll down on their profile page and view the friend
 
 https://user-images.githubusercontent.com/98188684/198301542-dd183927-bda6-4124-a0c8-b4ad268dc382.mov
 
+## 🔮 <b>Future Extensions:</b>
+- Allow users to instant message each other if they are friends. 
 
+
+
+
+## 💿 <b>Technologies:</b>
+- <img alt="Angular" src="https://user-images.githubusercontent.com/98188684/198304079-b7e2b1d4-7237-4811-bee2-212e6f5c75c6.png" width="20px"/> Angular
+- <img alt="TypeScript" src="https://user-images.githubusercontent.com/25181517/117448384-f9e06d00-af3e-11eb-9e02-a05bead103cf.png" width ="20px"/> TypeScript
+- <img alt="javascript" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" width="20px"/> JavaScript
+- <img alt="HTML" src="https://user-images.githubusercontent.com/25181517/117447535-f00a3a00-af3d-11eb-89bf-45aaf56dbaf1.png" width="20px"/> HTML 
+- <img alt="CSS" src="https://user-images.githubusercontent.com/25181517/117447663-0fa16280-af3e-11eb-8677-bcf8e4f8e298.png" width="20px"/> CSS
+- <img alt="NPM" src="https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png" width="20px"/> NPM
+- <img alt="Github" src="https://user-images.githubusercontent.com/25181517/117364276-fc4eb280-aebd-11eb-92ba-8a6ef74b7313.png" width="20px"/> Github
