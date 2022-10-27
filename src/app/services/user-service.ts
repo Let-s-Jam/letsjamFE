@@ -23,11 +23,11 @@ export class UserService {
 
 
   getJammers() {
-    return this.http.get(`http://letusjam.herokuapp.com/api/v1/users/4/search?`);
+    return this.http.get(`https://letusjam.herokuapp.com/api/v1/users/4/search?`);
   }
 
   getUserProfile() {
-    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/4/');
+    return this.http.get('https://letusjam.herokuapp.com/api/v1/users/4/');
   }
 
   getIncomingJammerProfiles() {
@@ -40,11 +40,11 @@ export class UserService {
           "Content-Type": "application/json",
         }),
     }
-    return this.http.patch<any>('http://letusjam.herokuapp.com/api/v1/users/', user, options)
+    return this.http.patch<any>('https://letusjam.herokuapp.com/api/v1/users/', user, options)
  }
 
  sendJammerSearchParams(params: string) {
-    this.http.get(`http://letusjam.herokuapp.com/api/v1/users/4/search?${params}`).subscribe({
+    this.http.get(`https://letusjam.herokuapp.com/api/v1/users/4/search?${params}`).subscribe({
       next: (returnedJammers: any) => {
         const searchedJammersArray = returnedJammers.data
         this.searchedUserEmitter.next(searchedJammersArray)
