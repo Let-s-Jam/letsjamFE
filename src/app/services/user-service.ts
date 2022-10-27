@@ -23,15 +23,15 @@ export class UserService {
 
 
   getJammers() {
-    return this.http.get(`http://letusjam.herokuapp.com/api/v1/users/3/search?`);
+    return this.http.get(`http://letusjam.herokuapp.com/api/v1/users/4/search?`);
   }
 
   getUserProfile() {
-    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/3/');
+    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/4/');
   }
 
   getIncomingJammerProfiles() {
-    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/3/connections/');
+    return this.http.get('http://letusjam.herokuapp.com/api/v1/users/4/connections/');
   }
 
   updateProfile(user: updatedUser) {
@@ -44,7 +44,7 @@ export class UserService {
  }
 
  sendJammerSearchParams(params: string) {
-    this.http.get(`http://letusjam.herokuapp.com/api/v1/users/3/search?${params}`).subscribe({
+    this.http.get(`http://letusjam.herokuapp.com/api/v1/users/4/search?${params}`).subscribe({
       next: (returnedJammers: any) => {
         const searchedJammersArray = returnedJammers.data
         this.searchedUserEmitter.next(searchedJammersArray)
@@ -60,54 +60,14 @@ export class UserService {
  }
 
  acceptRequest(id: number) {
-     Headers: new HttpHeaders({
-       "Content-Type": "application/json",
-       "Accept": "application/json",
-     })
- 
-   return this.http.patch<any>(`https://letusjam.herokuapp.com/api/v1/users/3/connections/${id}/`, 
+   return this.http.patch<any>(`https://letusjam.herokuapp.com/api/v1/users/4/connections/${id}/`, 
      {
        "status": "APPROVED"
      })
 }
 
- //make sure the data coming back from the emitter is compatible with founds
+ sendRequest(id: any) {
+     return this.http.post<any>(`https://letusjam.herokuapp.com/api/v1/users/4/connections/${id}`, '')
+  }
 
- 
-
- //subscribe to the reuest 
- //from jammers emit the updated list
- //
-
- // /api/v1 / users /: user_id / search ? name = steve & instrument=sax
-  // name = Emma & instrument=Piano& genre=Pop & distance=0 - 5
-
-
-// userEdit$ = new Observable(observer => {
-//   fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
-//     .then(response => response.json())
-//     .then(userEdit => {
-//       observer.next(userEdit);
-//       observer.complete();
-//     })
-//     .catch(err => observer.error(err))
-// });
-// pikachu$ = new Observable(observer => {
-//   fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
-//     .then(response => response.json())
-//     .then(pikachu => {
-//       observer.next(pikachu);
-//       observer.complete();
-//     })
-//     .catch(err => observer.error(err))
-// });
-
-
-
-
-  //add another method like this for each request, after they fix the json we can remove the responsetype argument
-  //in your component once you get data thats well structured 
-
-  //understand dependency injections
-  //understand how the userservice is getting injected
 }

@@ -12,6 +12,8 @@ interface SearchResults {
   genres: object[]
 }
 
+
+
 //we need to subscribe to the emitting component
 
 interface Instruments {
@@ -43,6 +45,8 @@ public founds: SearchResults[] = [{
   genres: []
 }]
 
+public ids: any
+
 public instruments: any
 
 public genres: any
@@ -70,17 +74,26 @@ public genres: any
     this.userService.getJammers().subscribe((data: any) => {
       console.log('all user search results', data)
       this.founds = []
+      this.ids = []
       for(let i = 0; i< data.data.length; i++){
         this.founds.push({
           ...data.data[i].attributes,
           instruments: data.data[i].attributes.instruments.map((instrument:any) => instrument.name),
           genres: data.data[i].attributes.genres.map((genre:any) => genre.name)
         });
+        this.ids.push(
+        data.data[i].id
+        )
       };
+      console.log(this.ids)
     })
     console.log('searcheduseremitter', this.userService.searchedUserEmitter)
   }
-
+addUser(id: any) {
+  this.userService.sendRequest(id).subscribe((data: any) => {
+    console.log('jam request: ', data)
+  }) 
+}
   // data is the repsonse from the server
 
   //observables
