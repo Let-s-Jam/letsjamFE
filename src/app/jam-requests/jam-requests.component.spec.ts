@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { JamRequestsComponent } from './jam-requests.component';
 
 describe('JamRequestsComponent', () => {
@@ -8,7 +8,8 @@ describe('JamRequestsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JamRequestsComponent ]
+      declarations: [ JamRequestsComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
 
