@@ -55,9 +55,12 @@ https://user-images.githubusercontent.com/98188684/198301542-dd183927-bda6-4124-
 
 ## 💿 <b>Technologies:</b>
 - <img alt="Angular" src="https://user-images.githubusercontent.com/98188684/198304079-b7e2b1d4-7237-4811-bee2-212e6f5c75c6.png" width="20px"/> Angular
+- <img alt="CLI" src="https://user-images.githubusercontent.com/98188684/198305198-5fdfacea-a45a-48f9-8edd-7358913faf25.png" width="20px"/> CLI (Command Line Interface)
 - <img alt="TypeScript" src="https://user-images.githubusercontent.com/25181517/117448384-f9e06d00-af3e-11eb-9e02-a05bead103cf.png" width ="20px"/> TypeScript
+- <img alt="Karma" src="https://user-images.githubusercontent.com/98188684/198305797-868aef5d-6113-4623-a25f-2e9d9fe70aea.png" width="20px"/> Karma
 - <img alt="javascript" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" width="20px"/> JavaScript
 - <img alt="HTML" src="https://user-images.githubusercontent.com/25181517/117447535-f00a3a00-af3d-11eb-89bf-45aaf56dbaf1.png" width="20px"/> HTML 
 - <img alt="CSS" src="https://user-images.githubusercontent.com/25181517/117447663-0fa16280-af3e-11eb-8677-bcf8e4f8e298.png" width="20px"/> CSS
 - <img alt="NPM" src="https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png" width="20px"/> NPM
 - <img alt="Github" src="https://user-images.githubusercontent.com/25181517/117364276-fc4eb280-aebd-11eb-92ba-8a6ef74b7313.png" width="20px"/> Github
+
