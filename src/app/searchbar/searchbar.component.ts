@@ -36,13 +36,6 @@ public searchResultValues: String[] = []
     if (this.searchResultGenre){this.searchResultValues.push(`genre=${this.searchResultGenre}`)}
     if (this.searchResultDistance){this.searchResultValues.push(`distance=${this.searchResultDistance}`)}
     const valuesToSend:string = this.searchResultValues.join('&')
-    // this.valuesToEmit.emit(valuesToSend)
-    console.log(this.searchResultName)
-    console.log(this.searchResultInstrument)
-    console.log(this.searchResultGenre)
-    console.log(this.searchResultDistance)
-    console.log(this.searchResultValues)
-    console.log(valuesToSend) //)
     this.userService.sendJammerSearchParams(valuesToSend)
     this.searchResultValues = []
   }
