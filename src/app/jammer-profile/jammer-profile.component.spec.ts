@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { JammerProfileComponent } from './jammer-profile.component';
 
 describe('JammerProfileComponent', () => {
@@ -8,7 +8,8 @@ describe('JammerProfileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JammerProfileComponent ]
+      declarations: [ JammerProfileComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
 

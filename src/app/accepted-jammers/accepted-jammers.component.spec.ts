@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AcceptedJammersComponent } from './accepted-jammers.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AcceptedJammersComponent', () => {
   let component: AcceptedJammersComponent;
@@ -8,7 +8,8 @@ describe('AcceptedJammersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AcceptedJammersComponent ]
+      declarations: [ AcceptedJammersComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
 
