@@ -60,7 +60,6 @@ export class UserService {
  }
 
  acceptRequest(id: number) {
- 
    return this.http.patch<any>(`https://letusjam.herokuapp.com/api/v1/users/4/connections/${id}/`, 
      {
        "status": "APPROVED"
